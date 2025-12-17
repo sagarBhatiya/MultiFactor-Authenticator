@@ -70,7 +70,7 @@ Multi-Factor Authentication significantly improves security by adding additional
 
 ## 🧩 System Workflow
 
-1. User enters his username and password
+1. User enters username and password
 2. Password is securely validated
 3. MFA challenge is triggered
 4. User verifies using OTP or secondary factor
