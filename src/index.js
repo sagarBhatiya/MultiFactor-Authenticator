@@ -11,7 +11,7 @@ dbConnect();
 
 const app = express();
 
-// Middleware setup
+// Middleware setup below
 const corsOptions = {
   origin: ["http://localhost:3001"],
   credentials: true,
@@ -33,8 +33,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Routes
-
+// Routes used
 app.use("/api/auth", authRoutes);
 
 // Listen
