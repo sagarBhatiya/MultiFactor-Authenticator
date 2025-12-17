@@ -15,7 +15,7 @@ export const register = async (req, res) => {
         .status(400)
         .json({ message: "Username and password are required." });
     }
-    // Check if user already exists
+    // Checking whether user already exist
     const existing = await User.findOne({ username }).exec();
     if (existing) {
       return res.status(409).json({ message: "Username already taken." });
