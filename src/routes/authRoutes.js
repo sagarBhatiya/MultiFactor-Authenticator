@@ -12,7 +12,7 @@ import {
 
 const router = Router();
 
-// Public routes
+// Public routes below
 router.post('/register', register);
 router.post('/login', passport.authenticate('local'), login);
 router.get('/status', authStatus);
