@@ -17,6 +17,7 @@ const dbConnect = async () => {
       masked
     );
 
+    
     // Basic validation: check for obvious malformed credentials
     if (!cs) {
       console.error(
@@ -30,7 +31,7 @@ const dbConnect = async () => {
       );
       return;
     }
-   
+                                                     
     const authorityMatch = cs.match(/^[a-z0-9+.-]+:\/\/([^@]+)@/i);
     if (authorityMatch) {
       const userinfo = authorityMatch[1];
@@ -41,7 +42,7 @@ const dbConnect = async () => {
         return;
       }
     }
-
+    
     await connect(cs);
     console.log("Database connected successfully");
   } catch (error) {
@@ -51,4 +52,6 @@ const dbConnect = async () => {
   }
 };
 
+
 export default dbConnect;
+                                          
